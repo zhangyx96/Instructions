@@ -1,3 +1,4 @@
+#此脚本用于统计数据集采集个数
 import os
 import numpy as np
 
