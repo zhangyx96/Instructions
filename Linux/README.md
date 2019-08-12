@@ -1,7 +1,7 @@
 # 服务器管理
 * **创建普通用户**
 ```shell
-useradd username -p password
+sudo useradd username -p password
 ```
 * **删除用户**
 ```shell
