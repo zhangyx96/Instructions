@@ -32,7 +32,7 @@ conda env create -f environment.yml
 ```shell
 kill -9
 ```
-表 1 kill命令常用信号及其含义
+表 1 kill命令常用信号及其含义    
 |信号编号|信号名|含义|
 |:-:|-|-|
 |0|EXIT|程序退出时收到该信息。|
