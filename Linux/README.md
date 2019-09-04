@@ -14,7 +14,7 @@ passwd
 2. 修改某个用户密码
 passwd username
 ```
->[更多详细内容参见]https://www.cnblogs.com/pengyunjing/p/8543026.html
+>[更多详细内容参见网页](https://www.cnblogs.com/pengyunjing/p/8543026.html)
 
 # 二、Conda 
 ## 环境管理
