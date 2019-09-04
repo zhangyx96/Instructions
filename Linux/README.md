@@ -1,4 +1,4 @@
-# 服务器管理
+# 一、用户管理
 * **创建普通用户**
 ```shell
 sudo useradd username -p password
@@ -14,9 +14,10 @@ passwd
 2. 修改某个用户密码
 passwd username
 ```
+>[更多详细内容参见]https://www.cnblogs.com/pengyunjing/p/8543026.html
 
-# conda 
-* **环境管理**
+# 二、Conda 
+## 环境管理
 
 a.创建环境
 ```shell
@@ -28,7 +29,7 @@ b.通过environment.yml文件创建环境
 ```shell
 conda env create -f environment.yml
 ```
-# kill进程
+# 三、进程管理
 ```shell
 kill -9
 ```
