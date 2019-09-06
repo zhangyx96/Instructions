@@ -1,3 +1,4 @@
+[Cheatsheet](http://tmuxcheatsheet.com/)
 # tmux shortcuts & cheatsheet
 
 start new:
