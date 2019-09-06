@@ -46,3 +46,6 @@ kill -9
 11|SEGV|段错误。
 15|TERM|正常结束进程，是kill命令的默认信号。
 
+# 四、监控服务器显卡占用情况
+[参见此网页](https://github.com/zhangwenxiao/GPU-Manager)
+
