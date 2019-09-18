@@ -49,3 +49,9 @@ kill -9
 # 四、监控服务器显卡占用情况
 [参见此网页](https://github.com/zhangwenxiao/GPU-Manager)
 
+# 五、TZ一键脚本
+```shell
+wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+chmod +x shadowsocks-all.sh
+./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
+```
