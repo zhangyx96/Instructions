@@ -16,6 +16,24 @@ passwd username
 ```
 >[更多详细内容参见网页](https://www.cnblogs.com/pengyunjing/p/8543026.html)
 
+# 二、服务器管理
+## 磁盘管理
+```shell
+df -hl
+```
+df 命令是linux系统上以磁盘分区为单位来查看文件系统的命令，后面可以加上不同的参数来查看磁盘的剩余空间信息。
+```shell
+df -hl 查看磁盘剩余空间
+df -h 查看每个根路径的分区大小
+du -sh [目录名] 返回该目录的大小
+du -sm [文件夹] 返回该文件夹总M数
+df --help 查看更多功能
+```
+```shell
+sudo du -sh /home/* #查看Linux中各个用户使用的存储空间大小
+du -h --max-depth=1 #查看各文件夹大小
+```
+
 # 二、Conda 
 ## 环境管理
 
