@@ -1,7 +1,9 @@
-# 一、用户管理
+# 一、服务器管理
+## 用户管理
 * **创建普通用户**
 ```shell
 sudo useradd username -p password
+sudo useradd -d \space2\*** -m ***   #在指定目录创建用户
 ```
 * **删除用户**
 ```shell
@@ -16,7 +18,6 @@ passwd username
 ```
 >[更多详细内容参见网页](https://www.cnblogs.com/pengyunjing/p/8543026.html)
 
-# 二、服务器管理
 ## 磁盘管理
 ```shell
 df -hl
@@ -33,23 +34,9 @@ df --help 查看更多功能
 sudo du -sh /home/* #查看Linux中各个用户使用的存储空间大小
 du -h --max-depth=1 #查看各文件夹大小
 ```
-
-# 二、Conda 
-## 环境管理
-
-a.创建环境
+## 进程管理
 ```shell
-conda create --name myenv
-conda create -n myenv python=3.4
-conda create -n myenv scipy=0.15.0
-```  
-b.通过environment.yml文件创建环境
-```shell
-conda env create -f environment.yml
-```
-# 三、进程管理
-```shell
-kill -9
+kill -9 
 ```
 表 1 kill命令常用信号及其含义    
 
@@ -64,10 +51,49 @@ kill -9
 11|SEGV|段错误。
 15|TERM|正常结束进程，是kill命令的默认信号。
 
-# 四、监控服务器显卡占用情况
+## 监控服务器显卡占用情况
 [参见此网页](https://github.com/zhangwenxiao/GPU-Manager)
 
-# 五、TZ一键脚本
+# 二、基础命令
+## chmod
+Linux/Unix 的文件调用权限分为三级 : 文件拥有者、群组、其他。利用 chmod 可以藉以控制文件如何被他人所调用。
+```shell
+chmod ugo+r file1.txt #将文件 file1.txt 设为所有人皆可读取
+chmod a+r file1.txt  #将文件 file1.txt 设为所有人皆可读取
+chmod ug+w,o-w file1.txt file2.txt #将文件 file1.txt 与 file2.txt 设为该文件拥有者，与其所属同一个群体者可写入，但其他以外的人则不可写入
+chmod -R a+r * #将目前目录下的所有文件与子目录皆设为任何人可读取 :
+```
+此外chmod也可以用数字来表示权限
+```shell
+chmod 777 file
+```
+```shell
+chmod abc file
+```
+其中a,b,c各为一个数字，分别表示User、Group、及Other的权限。
+
+**r=4，w=2，x=1**
+* 若要rwx属性则4+2+1=7；
+* 若要rw-属性则4+2=6
+* 若要r-x属性则4+1=5
+
+
+
+# 三、Conda命令 
+## 环境管理
+
+a.创建环境
+```shell
+conda create --name myenv
+conda create -n myenv python=3.4
+conda create -n myenv scipy=0.15.0
+```  
+b.通过environment.yml文件创建环境
+```shell
+conda env create -f environment.yml
+```
+
+# 三、VPN一键脚本
 ```shell
 wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
 chmod +x shadowsocks-all.sh
