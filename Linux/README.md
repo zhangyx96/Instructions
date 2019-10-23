@@ -3,7 +3,7 @@
 * **创建普通用户**
 ```shell
 sudo useradd username -p password
-sudo useradd -d \space2\*** -m ***   #在指定目录创建用户
+sudo useradd -d /space2/*** -m ***   #在指定目录创建用户
 ```
 * **删除用户**
 ```shell
